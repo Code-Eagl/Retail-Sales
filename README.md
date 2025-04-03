@@ -53,7 +53,7 @@ CREATE TABLE retail_sales
 SELECT COUNT(*) FROM retail_sales;
 SELECT COUNT(DISTINCT customer_id) FROM retail_sales;
 SELECT DISTINCT category FROM retail_sales;
-***
+```
 
 
 ## *Author - Bhagyashri Zade*
