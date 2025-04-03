@@ -85,20 +85,20 @@ delete from retail_sales
 		cogs is null or
 		total_sale is null
 ```
-### Know about data
-  *How many sales do we have?*
+### Know the data
+  **How many sales do we have?**
 ```sql
   select count (*) as total_sale 
   from retail_sales  --1987
 ```
   
-  *How many unique customers do we have*
+  **How many unique customers do we have**
 ```sql
   select count(distinct customer_id)
   as total_sales from retail_sales --155
 ```
   
-  *How many categories do we have?*
+  **How many categories do we have?**
 ```sql
   select count(distinct category)
   as total_sales from retail_sales --3
@@ -111,12 +111,12 @@ delete from retail_sales
 ```
    
 ### business problems
-*Retrive all columns for sales made on 2022-11-05*
+**Retrive all columns for sales made on 2022-11-05**
 ```sql
 select * from retail_sales where sale_date ='2022-11-05'  --11
 ```
 
-*Retrieve all transactions where the category is 'clothing'and uantity is more then 4 in Nov 2022*
+**Retrieve all transactions where the category is 'clothing'and uantity is more then 4 in Nov 2022**
 ```sql
 select 
   *
@@ -128,7 +128,7 @@ where category ='Clothing'
    quantiy >= 4   --17
 ```
 
-*Total sales for each category*
+**Total sales for each category**
 ```sql
 select 
   category ,
@@ -137,7 +137,7 @@ select
   group by 1
 ```                    
 
-*Total sales for each category along with total order*
+**Total sales for each category along with total orders**
 ```sql
 select 
   category ,
@@ -147,7 +147,7 @@ select
   group by 1
 ```     
 
-*Find the average age of customers who purchased items from the 'Beaury' category*
+**Find the average age of customers who purchased items from the 'Beaury' category**
 ```sql
 select 
     round(avg(age), 2) as avg_age
@@ -159,7 +159,7 @@ select * from retail_sales
 where total_sale >1000        --306
 ```
 
-*Find total no of transaction made by each gender to each category*
+**Find total no of transaction made by each gender to each category**
 ```sql
 select 
      category,
@@ -171,7 +171,7 @@ select
 	 order by 1
 ```
 
-*Calculate avg sale for each month, find best selling month in each year*
+**Calculate avg sale for each month, find best selling month in each year**
 ```sql
 --this will show rank of month 
 select * from 
@@ -207,7 +207,7 @@ from
 where rank = 1   --getting column reference "year" is ambiguous at line 2
 ```
 
-*Find top 5 customers on the highest total sales*
+**Find top 5 customers on the highest total sales**
 ```sql
 select 
 customer_id,
@@ -218,7 +218,7 @@ order by 2 desc
 limit 5
 ```
 
-*Find the number of uniquw customers who purched items from each category*
+**Find the number of unique customers who purchased items from each category**
 ```sql
 --show all customers
 select 
@@ -236,7 +236,7 @@ from retail_sales
 group by category
 ```
 
-*create each shift and number of order (exmorning <=12, afternoon between 12& 17, evening >17)*
+**create each shift and number of order (exmorning <=12, afternoon between 12& 17, evening >17)**
 ```sql
  with hourly_sale
  as
