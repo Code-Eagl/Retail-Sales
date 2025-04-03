@@ -53,13 +53,12 @@ CREATE TABLE retail_sales
 SELECT COUNT(*) FROM retail_sales;
 SELECT COUNT(DISTINCT customer_id) FROM retail_sales;
 SELECT DISTINCT category FROM retail_sales;
+***
 
 
-## Author - Bhagyashri Zade
+## *Author - Bhagyashri Zade*
 
-This project is part of my SQL practice, showcasing the SQL skills essential for data analyst roles. If you have any questions, feedback, or would like to collaborate, feel free to get in touch!
-
-### Stay Updated and Join the Community
+This project is part of my SQL practice, showcasing the SQL skills essential for data analyst roles. If you have any questions or feedback or would like to collaborate, feel free to get in touch!
 
 For more content on SQL, data analysis, and other updates, make sure to follow me on social media:
 
